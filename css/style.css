@@ -1,0 +1,810 @@
+
+/***********************/
+/*HEADER*/
+/***********************/
+.logo {
+    height: 2.4rem;
+}
+
+.header {
+    /* Se pone relative por el main-nav que lo tengo en absolute,
+    esto fue para el mobile navigation */
+
+    position:relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf2e9;
+
+    /* Esto de altura sirve para ponerlo despues STICKY */
+    height: 9.6rem;
+    padding: 0 4.8rem;
+}
+
+/***********************/
+/*NAVIGATION*/
+/***********************/
+
+.main-nav-list {
+    display: flex;
+    gap: 4.8rem;
+    list-style: none;
+    align-items: center;
+}
+
+.main-nav-link:visited,
+.main-nav-link:link {
+    text-decoration: none;
+    color:#333;
+    font-weight: 500;
+    font-size: 1.8rem;
+
+    transition: all 0.3s
+}
+
+.main-nav-link:active,
+.main-nav-link:hover {
+color: #cf711f;
+}
+
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    background-color: #e67e22;
+    color: white;
+}
+
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+    display:inline-block;
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    background-color: #cf711f;
+    color: white;
+}
+
+/***********************/
+/*MOBILE*/
+/***********************/
+.btn-mobile-nav {
+    background: none;
+    border: none;
+    cursor: pointer;
+/* Aca se tiene que dar display none, porque esto es Desktop, solo di estilos
+aqui por ahora. */
+    display: none;
+}
+
+.icon-mobile-nav {
+    width: 4.8rem;
+    height: 4.8rem;
+    color:#333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+    /* Se le dio display: none a esta parte del icono de close,
+    porque por default se debe de mostrar el de menu. */
+    display: none;
+}
+
+
+
+
+/***********************/
+/*HERO SECTION*/
+/***********************/
+
+.section-hero {
+    background-color: #fdf2e9;
+    padding: 4.8rem 0 9.6rem 0;
+     /* Order: top/right/bottom/left */
+
+    /* Order 2: Top/Horizontal/Left */
+}
+
+.hero {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 9.6rem;
+    padding: 0 3.2rem;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    color:#333;
+    letter-spacing: -0.5px;
+    margin-bottom: 3.2rem;
+}
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 4.8rem;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    padding: 1.6rem 3.2rem;
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: 600;
+    /* font-weight: bolder; */
+
+    transition: background-color 1s;
+
+}
+
+.btn--full:link,
+.btn--full:visited {
+    display: inline-block;
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn--full:hover,
+.btn--full:active {
+    display: inline-block;
+    background-color: #cf711f;
+    color: white;
+}
+
+
+.btn--outline:link,
+.btn--outline:visited {
+    display: inline-block;
+    background-color: white;
+    color:#555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+    display: inline-block;
+    background-color: #fdf2e9;
+    color:#555;
+
+    /* border: 3px solid white; */
+    /* Trick to add border inside */
+    box-shadow:  inset 0 0 0 3px #fff;
+}
+
+
+.margin-right-sm {
+    margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 8rem;
+}
+
+.delivered-imgs {
+    display: flex;
+}
+
+.delivered-imgs img {
+    width:4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid #fdf2e9;
+}
+
+.delivered-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.delivered-imgs img:last-child {
+    margin: 0;
+}
+
+.delivered-text span {
+    color: #e67e22;
+}
+/***********************/
+/**FEATURED IN SECTION*/
+
+.heading-featured-in {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color:#999;
+}
+
+.section-featured{
+    padding: 4.8rem 0 3.2rem 0;
+        /* Order: top/right/bottom/left */
+
+    /* Order 2: Top/Horizontal/Left */
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logos img {
+    height: 3.2rem;
+    filter:brightness(0);
+    opacity: 50%;
+
+}
+
+
+
+
+
+/***********************/
+/**HOW IT WORKS SECTION*/
+
+.section-how {
+    padding: 9.6rem 0;
+}
+
+.step-img {
+    width: 35%;
+}
+
+.step-number {
+    font-size: 9.8rem;
+    font-weight: 600;
+    color:#ddd;
+    margin-bottom: 1.2rem;
+
+}
+
+.step-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.step-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.step-img-box::before {
+    content: '';
+    display: block;
+    width: 60%;
+    background-color: #fdf2e9;
+    padding-bottom: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.step-img-box::after {
+    content: '';
+    display: block;
+    width: 50%;
+    background-color: #fae5d3;
+    padding-bottom: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+    z-index: -10;
+}
+
+
+/***********************/
+/*MEALS SECTION*********/
+/***********************/
+
+.section-meals {
+    padding: 9.6rem 0;
+}
+
+.meal-img {
+    width: 100%;
+    /* display: flex; */
+    /* gap: 0.4rem; */
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: #51cf66;
+    color:#333;    
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+.tag--vegeterian {background-color: #51cf66;}
+.tag--vegan {background-color: #94d82d;}
+.tag--paleo {background-color: #ffd43b;}
+
+.meal-title {
+    font-size: 2.4rem;
+    color:#333;
+    margin-bottom: 3.2rem;
+    font-weight: 600;
+}
+
+.meal-attributes {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 2rem;
+}
+
+.meal-attribute {
+    display: flex;
+    gap: 1.6rem;
+    font-size: 1.8rem;
+
+}
+
+.meal-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color:#e67e22;
+}
+
+.meal-tags {
+    margin-bottom: 1.2rem;
+    
+}
+
+.meal-content {
+    padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal {
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.075);
+    transition: all 0.4s;
+}
+
+.meal:hover {
+    transform: translateY(-1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0,0,0,0.06);
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color:#e67e22;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    line-height: 1.2;
+}
+
+.all-recipes {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.link:link,
+.link:visited {
+    display: inline-block;
+    color:#e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+    display: inline-block;
+    color:#cf711f;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.meal:hover {
+    transform: translateY(-1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0,0,0,0.06);
+}
+
+/*TESTIMONIALS SECTION*********/
+/***********************/
+
+.section-testimonials {
+    background-color: #fdf2e9;    
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    align-items: center;
+}
+
+.testimonials-container {
+    padding: 9.6rem;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4.8rem;
+    column-gap: 8rem;
+}
+
+.testimonial-img {
+    width: 6.4rem;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+font-size: 1.7rem;
+line-height: 1.8;
+margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+    font-size: 1.6rem;
+    color:#6F6F6F;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.6rem;
+    padding: 1.6rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/*PRICING SECTION*********/
+/***********************/
+
+.section-pricing {
+    padding: 9.6rem 0;
+}
+
+.pricing-plan {
+    border-radius: 11px;
+    width: 75%;
+}
+
+.pricing-plan--starter {
+justify-self: end;
+border: 2px solid #fdf2e9;
+padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+    background-color: #fdf2e9;
+    padding: 4.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+    content: 'Best value';
+    position: absolute;
+    top: 6%;
+    right: -17%;
+    transform: rotate(45deg);
+
+
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color:#333;
+    background-color: #ffd43b;
+    padding: 0.8rem 8rem;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 4.8rem;
+}
+
+.plan-name {
+    color:#cf711f;
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    margin-bottom: 3.2rem;
+
+}
+
+.plan-price {
+    font-size: 6.2rem;
+    font-weight: 600;
+    color:#333;
+    margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-right: 0.8rem;
+}
+
+.plan-text {
+font-size: 1.6rem;
+line-height: 1.6;
+color:#6F6F6F;
+}
+
+.plan-sign-up {
+    text-align: center;
+    margin-top: 4.8rem;
+}
+
+.plan-details {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.feature-icon {
+    color:#e67e22;
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-bottom: 3.2rem;
+    padding: 1.6rem;
+    border-radius: 50%;
+    background-color: #fdf2e9;
+}
+.feature-title {
+    font-size: 2.4rem;
+    color:#333;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+.feature-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/*CTA SECTION*********/
+/***********************/
+.section-cta {
+    padding: 4.8rem 0 12.8rem 0;
+    /* Order: top/right/bottom/left */
+
+    /* Order 2: Top/Horizontal/Left */
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.15);
+    background-color: #e67e22;
+    border-radius: 11px;
+
+    background-color: linear-gradient(to right bottom, #eb984e,#e67e22);
+    
+    overflow: hidden;
+    /* El overflow hace que todo este redondo en los borders */
+    /* Temporary height */
+    /* height: 50rem; */
+}
+
+.cta-text-box {
+    color:#45260a;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta .heading-secondary {
+    color:#45260a;
+    margin-bottom: 3.2rem;
+}
+
+.cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom:4.8rem ;
+}
+
+.cta-img-box {
+    background-image:linear-gradient(to right bottom, rgb(235, 151,78, 0.35),rgb(230, 126,34, 0.35)), 
+    url(../img/eating.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-form {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+/* Design**********************/
+.cta-form label {
+    display: block;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.cta-form input,
+.cta-form select {
+    width: 100%;
+    padding: 1.2rem;
+    font-family: inherit;
+    font-size: 1.8rem;
+    border: none;
+    background-color: #fdf2e9;
+    border-radius: 9px;
+    color: inherit;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.cta-form input::placeholder {
+    color: #aaa;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.btn--form {
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem;
+    border: none;
+    font-family: inherit;
+    border-radius: 9px;
+    font-size: 2rem;
+  }
+
+  .cta *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/*CTA SECTION*********/
+/***********************/
+.footer {
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
+}
+
+.grid--footer {
+   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr; 
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 3.2rem;
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+.footer-nav {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+text-decoration: none;
+font-size: 1.6rem ;
+color:#767676;
+
+transition: all 0.3s;
+}
+
+
+.footer-link:hover,
+.footer-link:active {
+color:#555;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+}
+
+.social-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color:#767676;
+    line-height: 1.6;
+
+    margin-top: auto;
+    /* se hizo flex el logo-col entonces con auto lo mando hacia abajo */
+}
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts {
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.address {
+    margin-bottom: 2.4rem;
+}
